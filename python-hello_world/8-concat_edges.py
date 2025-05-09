@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-str = "Holberton School" + " is the best school in the world!"
-print(str[18:39] + str[39:66])
+str = "Python is an interpreted, interactive, object-oriented programming language that combines remarkable power with very clear syntax"
+print(str[39:67] + str[107:113])
