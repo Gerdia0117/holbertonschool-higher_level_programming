@@ -5,7 +5,6 @@ def element_at(my_list, idx):
         return None
     return my_list[idx]
 
-
 if __name__ == "__main__":
     my_list = [1, 2, 3, 4, 5]
     # Test with valid indices
@@ -15,4 +14,3 @@ if __name__ == "__main__":
     # Test with invalid indices
     print("Element at index -1: {}".format(element_at(my_list, -1)))
     print("Element at index 5: {}".format(element_at(my_list, 5)))
-    
