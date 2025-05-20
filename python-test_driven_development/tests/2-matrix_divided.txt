@@ -13,6 +13,8 @@ Normal cases:
 Edge cases:
     >>> matrix_divided([[1]], 1)
     [[1.0]]
+    >>> matrix_divided([], 1)  # Empty matrix
+    []
     >>> matrix_divided([[0.1, 0.2, 0.3]], 1)
     [[0.1, 0.2, 0.3]]
     >>> matrix_divided([[1, 2], [3, 4]], 0.5)
@@ -22,11 +24,11 @@ Error cases:
     >>> matrix_divided("not a matrix", 1)
     Traceback (most recent call last):
         ...
-    TypeError: matrix must be a matrix (list of lists) of integers/floats
+    TypeError: matrix must be a matrix (list of lists) of integers/float
     >>> matrix_divided([[1, 2], [3, "4"]], 1)
     Traceback (most recent call last):
         ...
-    TypeError: matrix must be a matrix (list of lists) of integers/floats
+    TypeError: matrix must be a matrix (list of lists) of integers/float
     >>> matrix_divided([[1, 2], [3, 4, 5]], 1)
     Traceback (most recent call last):
         ...
