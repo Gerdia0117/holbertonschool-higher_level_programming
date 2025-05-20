@@ -1,8 +1,6 @@
 Test cases for add_integer function
 ==================================
 
-The add_integer function adds two integers after type checking:
-
     >>> add_integer = __import__('0-add_integer').add_integer
 
 Normal cases:
@@ -20,10 +18,16 @@ Edge cases:
     0
     >>> add_integer(-1.5, -1.5)
     -2
+
+Special float cases:
     >>> add_integer(float('inf'), 0)
     Traceback (most recent call last):
         ...
     OverflowError: cannot convert float infinity to integer
+    >>> add_integer(float('nan'), 0)
+    Traceback (most recent call last):
+        ...
+    ValueError: cannot convert float NaN to integer
 
 Error cases:
     >>> add_integer(4, "School")
@@ -34,7 +38,4 @@ Error cases:
     Traceback (most recent call last):
         ...
     TypeError: a must be an integer
-    >>> add_integer("Hello", "World")
-    Traceback (most recent call last):
-        ...
-    TypeError: a must be an integer
+    
