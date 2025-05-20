@@ -1,0 +1,34 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("Hello. How are you? Fine:")
+Hello.
+<BLANKLINE>
+How are you?
+<BLANKLINE>
+Fine:
+<BLANKLINE>
+
+>>> text_indentation("Hi")
+Hi
+
+>>> try:
+...     text_indentation(5.5)
+... except Exception as e:
+...     print(e)
+text must be a string
+
+>>> text_indentation("This is fun.  Let's keep going: Yes? Ok.")
+This is fun.
+<BLANKLINE>
+Let's keep going:
+<BLANKLINE>
+Yes?
+<BLANKLINE>
+Ok.
+<BLANKLINE>
+
+>>> try:
+...     text_indentation()
+... except Exception as e:
+...     print(e)
+text_indentation() missing 1 required positional argument: 'text'
