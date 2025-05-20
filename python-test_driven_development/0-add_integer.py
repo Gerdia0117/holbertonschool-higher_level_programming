@@ -4,6 +4,7 @@ This module provides a function to add two integers.
 The function handles type checking and conversion from floats.
 """
 
+
 def add_integer(a, b=98):
     """
     Adds two integers after proper type checking and conversion.
@@ -22,13 +23,11 @@ def add_integer(a, b=98):
         raise TypeError("a must be an integer")
     if type(b) not in (int, float):
         raise TypeError("b must be an integer")
-    
     # Handle NaN (Not a Number) float values
     if isinstance(a, float) and a != a:  # check for NaN
         raise ValueError("cannot convert float NaN to integer")
     if isinstance(b, float) and b != b:  # check for NaN
         raise ValueError("cannot convert float NaN to integer")
-    
     try:
         return int(a) + int(b)
     except (OverflowError, ValueError) as e:
