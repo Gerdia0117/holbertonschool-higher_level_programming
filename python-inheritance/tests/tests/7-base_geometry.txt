@@ -1,0 +1,32 @@
+#!/usr/bin/python3
+"""Test cases for BaseGeometry class."""
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry()
+
+# Test valid integers
+>>> bg.integer_validator("valid", 1)
+>>> bg.integer_validator("positive", 100)
+
+# Test non-integer values
+>>> bg.integer_validator("string", "hello")
+Traceback (most recent call last):
+TypeError: string must be an integer
+
+>>> bg.integer_validator("float", 3.14)
+Traceback (most recent call last):
+TypeError: float must be an integer
+
+# Test zero and negative values
+>>> bg.integer_validator("zero", 0)
+Traceback (most recent call last):
+ValueError: zero must be greater than 0
+
+>>> bg.integer_validator("negative", -5)
+Traceback (most recent call last):
+ValueError: negative must be greater than 0
+
+# Test area method
+>>> bg.area()
+Traceback (most recent call last):
+Exception: area() is not implemented
