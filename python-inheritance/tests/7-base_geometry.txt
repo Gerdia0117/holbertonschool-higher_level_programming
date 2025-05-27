@@ -7,6 +7,7 @@
 # Test valid integers
 >>> bg.integer_validator("valid", 1)
 >>> bg.integer_validator("positive", 100)
+>>> bg.integer_validator("age", 1)  # Specific test for "age" parameter
 
 # Test non-integer values
 >>> bg.integer_validator("string", "hello")
@@ -25,6 +26,10 @@ ValueError: zero must be greater than 0
 >>> bg.integer_validator("negative", -5)
 Traceback (most recent call last):
 ValueError: negative must be greater than 0
+
+>>> bg.integer_validator("age", 0)  # Specific test for "age" with 0
+Traceback (most recent call last):
+ValueError: age must be greater than 0
 
 # Test area method
 >>> bg.area()
