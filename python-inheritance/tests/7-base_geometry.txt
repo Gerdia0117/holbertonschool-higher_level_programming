@@ -4,30 +4,29 @@
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 >>> bg = BaseGeometry()
 
-# Test valid cases
+# Valid cases
 >>> bg.integer_validator("width", 10)
->>> bg.integer_validator("height", 89)
->>> bg.integer_validator("age", 1)
+>>> bg.integer_validator("age", 25)
 
-# Test invalid types
+# Invalid type (non-integer)
 >>> bg.integer_validator("name", "John")
 Traceback (most recent call last):
 TypeError: name must be an integer
 
->>> bg.integer_validator("distance", 3.14)
+>>> bg.integer_validator("price", 3.14)
 Traceback (most recent call last):
-TypeError: distance must be an integer
+TypeError: price must be an integer
 
-# Test invalid values
+# Invalid value (≤ 0)
 >>> bg.integer_validator("age", 0)
 Traceback (most recent call last):
 ValueError: age must be greater than 0
 
->>> bg.integer_validator("count", -5)
+>>> bg.integer_validator("count", -1)
 Traceback (most recent call last):
 ValueError: count must be greater than 0
 
-# Test area method
+# area() method test
 >>> bg.area()
 Traceback (most recent call last):
 Exception: area() is not implemented
