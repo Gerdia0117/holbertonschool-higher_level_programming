@@ -4,32 +4,28 @@
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 >>> bg = BaseGeometry()
 
-# Test valid integers
->>> bg.integer_validator("valid", 1)
->>> bg.integer_validator("positive", 100)
->>> bg.integer_validator("age", 1)  # Specific test for "age" parameter
+# Test valid cases
+>>> bg.integer_validator("width", 10)
+>>> bg.integer_validator("height", 89)
+>>> bg.integer_validator("age", 1)
 
-# Test non-integer values
->>> bg.integer_validator("string", "hello")
+# Test invalid types
+>>> bg.integer_validator("name", "John")
 Traceback (most recent call last):
-TypeError: string must be an integer
+TypeError: name must be an integer
 
->>> bg.integer_validator("float", 3.14)
+>>> bg.integer_validator("distance", 3.14)
 Traceback (most recent call last):
-TypeError: float must be an integer
+TypeError: distance must be an integer
 
-# Test zero and negative values
->>> bg.integer_validator("zero", 0)
-Traceback (most recent call last):
-ValueError: zero must be greater than 0
-
->>> bg.integer_validator("negative", -5)
-Traceback (most recent call last):
-ValueError: negative must be greater than 0
-
->>> bg.integer_validator("age", 0)  # Specific test for "age" with 0
+# Test invalid values
+>>> bg.integer_validator("age", 0)
 Traceback (most recent call last):
 ValueError: age must be greater than 0
+
+>>> bg.integer_validator("count", -5)
+Traceback (most recent call last):
+ValueError: count must be greater than 0
 
 # Test area method
 >>> bg.area()
