@@ -8,7 +8,7 @@
 >>> bg.integer_validator("width", 10)
 >>> bg.integer_validator("age", 25)
 
-# === Type Errors (Non-Integer Inputs) ===
+# === Type Errors (Non-Integer Values) ===
 >>> bg.integer_validator("name", "John")
 Traceback (most recent call last):
 TypeError: name must be an integer
@@ -17,7 +17,7 @@ TypeError: name must be an integer
 Traceback (most recent call last):
 TypeError: price must be an integer
 
->>> bg.integer_validator("flag", True)  # Bool is not int
+>>> bg.integer_validator("flag", True)  # Bool rejected
 Traceback (most recent call last):
 TypeError: flag must be an integer
 
@@ -39,7 +39,7 @@ TypeError: empty must be an integer
 Traceback (most recent call last):
 TypeError: none must be an integer
 
-# === area() Method ===
+# === area() Method Test ===
 >>> bg.area()
 Traceback (most recent call last):
 Exception: area() is not implemented
