@@ -21,8 +21,8 @@ class BaseGeometry:
             value (int): Value to validate.
 
         Raises:
-            TypeError: If `value` is not an integer.
-            ValueError: If `value` ≤ 0.
+            TypeError: If value is not an integer.
+            ValueError: If value ≤ 0.
         """
         if type(value) is not int:
             raise TypeError(f"{name} must be an integer")
