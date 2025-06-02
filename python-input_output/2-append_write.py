@@ -6,7 +6,8 @@ Module for appending a string to a text file and returning character count.
 
 def append_write(filename="", text=""):
     """
-    Appends a string to a text file (UTF8) and returns number of characters added.
+    Appends a string to a text file (UTF8).
+    Returns number of characters added.
 
     Args:
         filename (str): Name of file to append to
