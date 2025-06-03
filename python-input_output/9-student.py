@@ -6,7 +6,8 @@ Module for defining a Student class with JSON serialization capability.
 
 class Student:
     """
-    A class that represents a student with basic information and JSON conversion.
+    A class that represents a student with basic information
+    and JSON conversion capability.
     """
 
     def __init__(self, first_name, last_name, age):
