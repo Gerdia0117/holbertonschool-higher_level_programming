@@ -36,10 +36,11 @@ def add_user():
 
     username = data['username']
 
-    # Check for duplicate username
+    # Check for duplicate username (must return 400 with specific error message)
     if username in users:
         return jsonify({"error": "User already exists"}), 400
 
+    # Create new user with all required fields
     users[username] = {
         "username": username,
         "name": data.get("name", ""),
@@ -53,4 +54,4 @@ def add_user():
     }), 201
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)  # Disable debug mode for testing
