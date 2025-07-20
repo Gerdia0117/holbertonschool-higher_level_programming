@@ -159,7 +159,7 @@ All scripts use modern JavaScript features and the Fetch API, which require rece
 
 ## Author
 
-Holberton School Project - JavaScript DOM Manipulation
+Gerald Diaz Carrasquillo
 
 ---
 
