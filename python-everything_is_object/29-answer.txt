@@ -1,0 +1,103 @@
+#!/usr/bin/python3
+"""
+Python Mutability Demo - Everything is an Object!
+Covers:
+- id() and type()
+- Mutable vs Immutable objects
+- Function argument passing
+- Tuple quirks
+- List copying
+"""
+
+def main():
+    print("=== 1. id() and type() ===")
+    a = 42
+    b = "hello"
+    print(f"id(a): {id(a)}, type(a): {type(a)}")
+    print(f"id(b): {id(b)}, type(b): {type(b)}\n")
+
+    print("=== 2. Mutable Objects (Lists) ===")
+    lst1 = [1, 2, 3]
+    lst2 = lst1
+    lst1.append(4)
+    print(f"Original list: {lst1}")
+    print(f"Assigned list: {lst2} (same object? {lst1 is lst2})")
+    print(f"Memory addresses: {id(lst1)} vs {id(lst2)}\n")
+
+    print("=== 3. Immutable Objects (Strings) ===")
+    s1 = "hello"
+    s2 = s1
+    s1 += " world"
+    print(f"Original string: {s1}")
+    print(f"Assigned string: {s2} (same object? {s1 is s2})")
+    print(f"Memory addresses: {id(s1)} vs {id(s2)}\n")
+
+    print("=== 4. Function Argument Passing ===")
+    def modify(arg):
+        print(f"Inside func - initial id: {id(arg)}")
+        if isinstance(arg, list):
+            arg.append(4)
+        elif isinstance(arg, int):
+            arg += 1
+        print(f"Inside func - modified id: {id(arg)}")
+
+    num = 1
+    my_list = [1, 2, 3]
+    print("\nImmutable (int) example:")
+    print(f"Before: {num}, id: {id(num)}")
+    modify(num)
+    print(f"After: {num}, id: {id(num)}")
+
+    print("\nMutable (list) example:")
+    print(f"Before: {my_list}, id: {id(my_list)}")
+    modify(my_list)
+    print(f"After: {my_list}, id: {id(my_list)}\n")
+
+    print("=== 5. Tuple Quirks ===")
+    t1 = (1)
+    t2 = (1,)
+    print(f"t1 = (1) → type: {type(t1)} (not a tuple!)")
+    print(f"t2 = (1,) → type: {type(t2)} (proper tuple)\n")
+
+    print("=== 6. List Copying ===")
+    original = [1, 2, 3]
+    shallow_copy = original.copy()
+    original.append(4)
+    print(f"Original: {original}")
+    print(f"Shallow copy: {shallow_copy}")
+    print(f"Same object? {original is shallow_copy}\n")
+
+    print("=== 7. Empty Tuple Singleton ===")
+    empty1 = ()
+    empty2 = ()
+    print(f"Empty tuples same object? {empty1 is empty2}")
+
+if __name__ == "__main__":
+    main()
+Key Features:
+
+    Complete Demonstration - Covers all concepts from the blog post in executable code
+
+    Self-documenting Output - Clearly shows memory addresses and object relationships
+
+    Practical Examples - Includes:
+
+        Mutable list behavior
+
+        Immutable string behavior
+
+        Function argument passing differences
+
+        Tuple syntax quirks
+
+        List copying
+
+        Empty tuple optimization
+
+How to Use:
+
+    Save as mutability_demo.py
+
+    Run with python3 mutability_demo.py
+
+    Observe the output that illustrates all key mutability concepts
