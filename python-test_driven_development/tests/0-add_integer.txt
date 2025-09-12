@@ -1,3 +1,8 @@
+#!/usr/bin/python3
+"""
+This module defines a function add_integer.
+It adds two integers or floats after casting them to integers.
+
 >>> add_integer(1, 2)
 3
 >>> add_integer(100, -2)
@@ -14,3 +19,4 @@ TypeError: b must be an integer
 Traceback (most recent call last):
     ...
 TypeError: a must be an integer
+"""
