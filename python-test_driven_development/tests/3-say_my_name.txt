@@ -9,23 +9,23 @@ Usage
 ::
 
     >>> say_my_name = __import__('3-say_my_name').say_my_name
-    >>> say_my_name("Joseph", "Gleason")
-    My name is Joseph Gleason
+    >>> say_my_name("Gerald", "Diaz")
+    My name is Gerald Diaz
 
 ::
 
-    >>> say_my_name("Joseph")
-    My name is Joseph
+    >>> say_my_name("Gerald")
+    My name is Gerald
 
 ::
 
-    >>> say_my_name(9, "Gleason")
+    >>> say_my_name(9, "Diaz")
     Traceback (most recent call last):
     TypeError: first_name must be a string
 
 ::
 
-    >>> say_my_name("Joseph", ["Engineering", "Music"])
+    >>> say_my_name("Gerald", ["Engineering", "Music"])
     Traceback (most recent call last):
     TypeError: last_name must be a string
 
