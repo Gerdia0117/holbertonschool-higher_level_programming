@@ -9,6 +9,7 @@ class Square:
     def __init__(self, size):
         """Initialize a new square
         Args:
-            Size: size of the square (no type/value verification)
+            Size: size of the square
+            (no type/value verification)
         """
         self.__size = size
