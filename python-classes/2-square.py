@@ -1,4 +1,4 @@
-#!/usr/bin/pythong3
+#!/usr/bin/python3
 """Define a class square with size validation"""
 
 
