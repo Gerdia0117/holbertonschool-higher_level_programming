@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-
+"""Module 8-rectangle: defines a Rectangle class with width, height,
+area, perimeter, string representation, repr, deletion behavior,
+instance tracking, customizable print symbol, and comparison method.
+"""
 
 
 class Rectangle:
