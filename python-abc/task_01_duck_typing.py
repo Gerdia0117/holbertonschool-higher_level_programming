@@ -11,12 +11,12 @@ class Shape(ABC):
     @abstractmethod
     def area(self):
         """Return the area of the shape."""
-        raise NotImplementedError("Subclasses must implement area()")
+        pass
 
     @abstractmethod
     def perimeter(self):
         """Return the perimeter of the shape."""
-        raise NotImplementedError("Subclasses must implement perimeter()")
+        pass
 
 
 class Circle(Shape):
