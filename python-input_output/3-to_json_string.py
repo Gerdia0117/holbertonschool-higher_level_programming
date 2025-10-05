@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""Module that appends a string at the end of a text file."""
+"""Module that returns the JSON representation of an object (string)."""
+import json
 
 
-def append_write(filename="", text=""):
-    """Append a string to the end of a text file,Return characters added."""
-    with open(filename, "a", encoding="utf-8") as f:
-        return f.write(text)
+def to_json_string(my_obj):
+    """Return the JSON representation of a Python object as a string."""
+    return json.dumps(my_obj)
