@@ -22,7 +22,8 @@ class Student:
             dict: Dictionary representation of the student.
         """
         student_dict = self.__dict__.copy()
-        if isinstance(attrs, list) and all(isinstance(a, str) for a in attrs):
-            filtered_dict = {k: v for k, v in student_dict.items() if k in attrs}
-            return filtered_dict
+        if isinstance(attrs, list) and all(isinstance(a, str)
+                                           for a in attrs):
+            filtered = {k: v for k, v in student_dict.items() if k in attrs}
+            return filtered
         return student_dict
