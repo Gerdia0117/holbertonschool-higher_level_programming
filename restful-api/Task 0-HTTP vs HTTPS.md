@@ -1,4 +1,4 @@
-🌐 HTTP and HTTPS Overview
+  HTTP and HTTPS Overview
 What is HTTP?
 
 HTTP (Hypertext Transfer Protocol) is the standard system that allows web browsers and servers to communicate. It works over a TCP connection and is stateless, meaning each request is independent and doesn’t require a continuous connection.
